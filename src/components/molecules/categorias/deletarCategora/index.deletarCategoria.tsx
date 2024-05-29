@@ -7,8 +7,10 @@ interface DeletarCategoriaProps {}
 
 const DeletarCategoria: FC<DeletarCategoriaProps> = () => {
   const id = useParams().id;
-  const handleDelete = () => {
-    categoriaService.deleteById(Number(id));
+  const handleDelete = async () => {
+    const c = await categoriaService.deleteById(Number(id));
+    console.log(c);
+    window.location.href = "/";
   };
   return (
     <Container>
@@ -17,14 +19,14 @@ const DeletarCategoria: FC<DeletarCategoriaProps> = () => {
           Tem certeza que deseja deletar esta categoria?
         </h2>
 
-        <div>
+        <div className="flex gap-5 mx-auto">
           <button
             className="bg-red-400 p-2 rounded-md"
             onClick={() => handleDelete()}
           >
             Deletar
           </button>
-          <Link to={"/"}>
+          <Link to={"/categorias"}>
             <button className="bg-yellow-300 p-2 rounded-md">Cancelar</button>
           </Link>
         </div>

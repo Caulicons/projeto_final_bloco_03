@@ -5,7 +5,7 @@ interface MainProps {
 }
 
 const Main: FC<MainProps> = ({ children }) => {
-  return <main className={`min-h-[90vh] p-6 `}>{children}</main>;
+  return <main className={`min-h-[85vh] p-6 select-none `}>{children}</main>;
 };
 
 export default Main;

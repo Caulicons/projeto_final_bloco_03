@@ -15,13 +15,13 @@ const CategoriaCard: FC<CategoriaCardProps> = ({ categoria: { id, nome } }) => {
       <div className="flex w-full  justify-between align-middle text-center   ">
         <Link
           to={`/editar-categoria/${id}`}
-          className="hover:underline bg-yellow-300 w-full p-4 self-center h-full rounded-bl-lg font-semibold"
+          className="hover:underline bg-yellow-300/85 w-full p-4 self-center h-full rounded-bl-lg font-semibold"
         >
           Editar
         </Link>
         <Link
           to={`/deletar-categoria/${id}`}
-          className="bg-red-400 w-full p-4 rounded-br-xl font-semibold hover:underline"
+          className="bg-red-400/85 w-full p-4 rounded-br-xl font-semibold hover:underline"
         >
           Deletar
         </Link>
