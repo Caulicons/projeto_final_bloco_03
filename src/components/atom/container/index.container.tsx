@@ -4,7 +4,7 @@ interface ContainerProps {
   size?: "normal" | "small";
   tag?: "div" | "section";
   children?: React.ReactNode;
-  className: string;
+  className?: string;
 }
 
 const Container: FC<ContainerProps> = ({
